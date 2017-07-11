@@ -1,0 +1,62 @@
+#CODIGO MOTOR
+
+import RPI.GPIO as GPIO
+import time
+
+GPIO.setmode(GPIO.BCM)
+GPIO.setup( ,GPIO.OUT) # IN1 
+GPIO.setup( ,GPIO.OUT) # IN2
+GPIO.setup( ,GPIO.OUT) # IN3 
+GPIO.setup( ,GPIO.OUT) # IN4
+
+def FRENTE(tempo):
+	t=float(tempo)
+	# MOTOR 1
+	GPIO.OUTPUT( ,1) # IN1
+	GPIO.OUTPUT( ,0) # IN2
+	# MOTOR 2
+	GPIO.OUTPUT( ,1) # IN3
+	GPIO.OUTPUT( ,0) # IN4
+	time.sleep(t)
+	PARAR()
+
+def RE(tempo):
+	t=float(tempo)
+	# MOTOR 1
+	GPIO.OUTPUT( ,0) # IN1
+	GPIO.OUTPUT( ,1) # IN2
+	# MOTOR 2
+	GPIO.OUTPUT( ,0) # IN3
+	GPIO.OUTPUT( ,1) # IN4
+	time.sleep(t)
+	PARAR()
+
+def ROTA(tempo,dir):
+	t=float(tempo)
+	d=int(dir)
+	IF d == 1: #direita 
+		# MOTOR 1
+		GPIO.OUTPUT( ,0) # IN1
+		GPIO.OUTPUT( ,1) # IN2
+		# MOTOR 2
+		GPIO.OUTPUT( ,1) # IN3
+		GPIO.OUTPUT( ,0) # IN4
+		time.sleep(t)
+		PARAR()
+	IF d == 0: #esquerda
+		# MOTOR 1
+		GPIO.OUTPUT( ,1) # IN1
+		GPIO.OUTPUT( ,0) # IN2
+		# MOTOR 2
+		GPIO.OUTPUT( ,0) # IN3
+		GPIO.OUTPUT( ,1) # IN4
+		time.sleep(t)
+		PARAR()
+
+def PARAR():
+	# MOTOR 1
+	GPIO.OUTPUT( ,1) # IN1
+	GPIO.OUTPUT( ,1) # IN2
+	# MOTOR 2
+	GPIO.OUTPUT( ,1) # IN3
+	GPIO.OUTPUT( ,1) # IN4
