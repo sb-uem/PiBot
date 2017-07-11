@@ -3,31 +3,36 @@
 import RPI.GPIO as GPIO
 import time
 
+MD1=27  #MotorDireitoEntrada1
+MD2=22  #MotorDireitoEntrada2
+ME1=8   #MotorEsquerdoEntrada1
+ME2=7   #MotorEsquerdoEntrada2
+
 GPIO.setmode(GPIO.BCM)
-GPIO.setup( ,GPIO.OUT) # IN1 
-GPIO.setup( ,GPIO.OUT) # IN2
-GPIO.setup( ,GPIO.OUT) # IN3 
-GPIO.setup( ,GPIO.OUT) # IN4
+GPIO.setup(MD1 ,GPIO.OUT) # IN1 
+GPIO.setup(MD2 ,GPIO.OUT) # IN2
+GPIO.setup(ME1 ,GPIO.OUT) # IN3 
+GPIO.setup(ME2 ,GPIO.OUT) # IN4
 
 def FRENTE(tempo):
 	t=float(tempo)
 	# MOTOR 1
-	GPIO.OUTPUT( ,1) # IN1
-	GPIO.OUTPUT( ,0) # IN2
+	GPIO.OUTPUT(MD1 ,1) # IN1
+	GPIO.OUTPUT(MD2 ,0) # IN2
 	# MOTOR 2
-	GPIO.OUTPUT( ,1) # IN3
-	GPIO.OUTPUT( ,0) # IN4
+	GPIO.OUTPUT(ME1 ,1) # IN3
+	GPIO.OUTPUT(ME2 ,0) # IN4
 	time.sleep(t)
 	PARAR()
 
 def RE(tempo):
 	t=float(tempo)
 	# MOTOR 1
-	GPIO.OUTPUT( ,0) # IN1
-	GPIO.OUTPUT( ,1) # IN2
+	GPIO.OUTPUT(MD1 ,0) # IN1
+	GPIO.OUTPUT(MD2 ,1) # IN2
 	# MOTOR 2
-	GPIO.OUTPUT( ,0) # IN3
-	GPIO.OUTPUT( ,1) # IN4
+	GPIO.OUTPUT(ME1 ,0) # IN3
+	GPIO.OUTPUT(ME2 ,1) # IN4
 	time.sleep(t)
 	PARAR()
 
@@ -36,27 +41,27 @@ def ROTA(tempo,dir):
 	d=int(dir)
 	IF d == 1: #direita 
 		# MOTOR 1
-		GPIO.OUTPUT( ,0) # IN1
-		GPIO.OUTPUT( ,1) # IN2
+		GPIO.OUTPUT(MD1 ,0) # IN1
+		GPIO.OUTPUT(MD2 ,1) # IN2
 		# MOTOR 2
-		GPIO.OUTPUT( ,1) # IN3
-		GPIO.OUTPUT( ,0) # IN4
+		GPIO.OUTPUT(ME1 ,1) # IN3
+		GPIO.OUTPUT(ME2 ,0) # IN4
 		time.sleep(t)
 		PARAR()
 	IF d == 0: #esquerda
 		# MOTOR 1
-		GPIO.OUTPUT( ,1) # IN1
-		GPIO.OUTPUT( ,0) # IN2
+		GPIO.OUTPUT(MD1 ,1) # IN1
+		GPIO.OUTPUT(MD2 ,0) # IN2
 		# MOTOR 2
-		GPIO.OUTPUT( ,0) # IN3
-		GPIO.OUTPUT( ,1) # IN4
+		GPIO.OUTPUT(ME1 ,0) # IN3
+		GPIO.OUTPUT(ME2 ,1) # IN4
 		time.sleep(t)
 		PARAR()
 
 def PARAR():
 	# MOTOR 1
-	GPIO.OUTPUT( ,1) # IN1
-	GPIO.OUTPUT( ,1) # IN2
+	GPIO.OUTPUT(MD1 ,1) # IN1
+	GPIO.OUTPUT(MD2 ,1) # IN2
 	# MOTOR 2
-	GPIO.OUTPUT( ,1) # IN3
-	GPIO.OUTPUT( ,1) # IN4
+	GPIO.OUTPUT(ME1 ,1) # IN3
+	GPIO.OUTPUT(ME2 ,1) # IN4
