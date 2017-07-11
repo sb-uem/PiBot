@@ -1,9 +1,14 @@
-DEF encoder(estado, i,alfa);
-i = 0;
-alfa = 0;
-when estado = HIGH
-  begin
-  i =i+1;
-  alfa = i*18;
-  end;
-  
+estadoanterior = LOW
+estadoatual = leitura
+DEF encoder_confere(i,alfa);
+  when ((estadoatual)!= (estadoanterior))
+    begin
+    i =i+1;
+    alfa = i*18;
+    estadoanterior = estadoatual;
+    estadoatual = leitura;
+    end;
+ 
+DEF encoder_zera(i,alfa);  
+  i = 0;
+  alfa = 0;
