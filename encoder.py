@@ -1,14 +1,12 @@
 estadoanterior = LOW
 estadoatual = leitura
-DEF encoder_confere(i,alfa);
-  when ((estadoatual)!= (estadoanterior))
-    begin
+def encoder_confere(estadoatual,i,alfa):
+  if ((estadoatual) != (estadoanterior)):
     i =i+1;
     alfa = i*18;
     estadoanterior = estadoatual;
     estadoatual = leitura;
-    end;
  
-DEF encoder_zera(i,alfa);  
+def encoder_zera(i,alfa):  
   i = 0;
   alfa = 0;
