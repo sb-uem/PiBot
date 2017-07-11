@@ -1,0 +1,9 @@
+DEF encoder(estado, i,alfa);
+i = 0;
+alfa = 0;
+when estado = HIGH
+  begin
+  i =i+1;
+  alfa = i*18;
+  end;
+  
