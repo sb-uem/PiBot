@@ -3,6 +3,9 @@
 import RPI.GPIO as GPIO
 import time
 
+Enable1=17 #Enable Motor 1
+Enable2=25 #Enable Motor 2
+
 MD1=27  #MotorDireitoEntrada1
 MD2=22  #MotorDireitoEntrada2
 ME1=8   #MotorEsquerdoEntrada1
@@ -13,6 +16,10 @@ GPIO.setup(MD1 ,GPIO.OUT) # IN1
 GPIO.setup(MD2 ,GPIO.OUT) # IN2
 GPIO.setup(ME1 ,GPIO.OUT) # IN3 
 GPIO.setup(ME2 ,GPIO.OUT) # IN4
+
+#Set Enable High
+Enable1=1
+Enable2=1
 
 def FRENTE(tempo):
 	t=float(tempo)
