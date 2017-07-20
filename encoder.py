@@ -1,16 +1,20 @@
 class Encoder(object):
   
-  def __init__(self,estadoanterior):
+  def __init__(self,pino):
         self.estadoanterior = LOW
+        self.pino = pino
+        self.encoder_zera()
+        
       
-  def encoder_confere(self,estadoatual,i,alfa):
-   if ((self.estadoatual) != (self.estadoanterior)):
+  def encoder_confere(self):
+    self.estadoatual = self.leitura #feita no GPIO de self.pino 
+    if ((self.estadoatual) != (self.estadoanterior)):
       self.i = self.i+1
       self.alfa = self.i*18
       self.estadoanterior = self.estadoatual
-      self.estadoatual = self.leitura
+      
    
-  def encoder_zera(self,i,alfa):  
+  def encoder_zera(self):  
    self.i = 0
    self.alfa = 0
   
