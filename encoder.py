@@ -1,7 +1,9 @@
+
+
 class Encoder(object):
   
   def __init__(self,pino):
-        self.estadoanterior = LOW
+        self.estadoanterior = 
         self.pino = pino
         self.encoder_zera()
         
@@ -18,8 +20,8 @@ class Encoder(object):
    self.i = 0
    self.alfa = 0
   
-encoderdir=classEncoder(19)
-encoderesq=classEncoder(26)
+encoderdir=Encoder(19)
+encoderesq=Encoder(26)
 
  
 
