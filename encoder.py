@@ -18,8 +18,8 @@ class Encoder(object):
    self.i = 0
    self.alfa = 0
   
-encoderdir=classEncoder()
-encoderesq=classEncoder()
+encoderdir=classEncoder(19)
+encoderesq=classEncoder(26)
 
  
 
