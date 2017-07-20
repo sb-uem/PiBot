@@ -3,7 +3,7 @@
 class Encoder(object):
   
   def __init__(self,pino):
-        self.estadoanterior = 
+        self.estadoanterior = False
         self.pino = pino
         self.encoder_zera()
         
