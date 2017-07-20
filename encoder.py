@@ -1,4 +1,23 @@
-estadoanterior = LOW
+class Encoder(object):
+  
+  def __init__(self,estadoanterior):
+        self.estadoanterior = LOW
+      
+  def encoder_confere(self,estadoatual,i,alfa):
+   if ((self.estadoatual) != (self.estadoanterior)):
+      self.i = self.i+1
+      self.alfa = self.i*18
+      self.estadoanterior = self.estadoatual
+      self.estadoatual = self.leitura
+   
+  def encoder_zera(self,i,alfa):  
+   self.i = 0
+   self.alfa = 0
+  
+encoderdir=classEncoder()
+encoderesq=classEncoder()
+
+ 
 
 def encoder_confere(estadoatual,i,alfa):
   if ((estadoatual) != (estadoanterior)):
