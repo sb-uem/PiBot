@@ -3,12 +3,12 @@ import time
 
 GPIO.setmode(GPIO.BCM)
 
-Enable1=17 #Enable Motor 1
+Enable1=22 #Enable Motor 1
 Enable2=25 #Enable Motor 2
 
 #Set Enable High
-GPIO.OUTPUT(Enable1,1)
-GPIO.OUTPUT(Enable2,1)
+GPIO.output(Enable1,1)
+GPIO.output(Enable2,1)
 
 class Motor(object):
 	
@@ -20,31 +20,31 @@ class Motor(object):
 		self.parar()
 
 	def frente(self):
-		GPIO.OUTPUT(self.md1,1)
-		GPIO.OUTPUT(self.md2,0)
-		GPIO.OUTPUT(self.me1,1)	
-		GPIO.OUTPUT(self.me2,0)
+		GPIO.output(self.md1,1)
+		GPIO.output(self.md2,0)
+		GPIO.output(self.me1,1)	
+		GPIO.output(self.me2,0)
 
 	def re(self):
-		GPIO.OUTPUT(self.md1,0)
-		GPIO.OUTPUT(self.md2,1)
-		GPIO.OUTPUT(self.me1,0)
-		GPIO.OUTPUT(self.me2,1)
+		GPIO.output(self.md1,0)
+		GPIO.output(self.md2,1)
+		GPIO.output(self.me1,0)
+		GPIO.output(self.me2,1)
 
 	def direita(self):
-		GPIO.OUTPUT(self.md1,0)
-		GPIO.OUTPUT(self.md2,1)
-		GPIO.OUTPUT(self.me1,1)
-		GPIO.OUTPUT(self.me2,0)
+		GPIO.output(self.md1,0)
+		GPIO.output(self.md2,1)
+		GPIO.output(self.me1,1)
+		GPIO.output(self.me2,0)
 
 	def esquerda(self):
-		GPIO.OUTPUT(self.md1,1)
-		GPIO.OUTPUT(self.md2,0)
-		GPIO.OUTPUT(self.me1,0)
-		GPIO.OUTPUT(self.me2,1)		
+		GPIO.output(self.md1,1)
+		GPIO.output(self.md2,0)
+		GPIO.output(self.me1,0)
+		GPIO.output(self.me2,1)		
 
 	def parar(self):
-		GPIO.OUTPUT(self.md1,1)
-		GPIO.OUTPUT(self.md2,1)
-		GPIO.OUTPUT(self.me1,1)
-		GPIO.OUTPUT(self.me2,1)
+		GPIO.output(self.md1,1)
+		GPIO.output(self.md2,1)
+		GPIO.output(self.me1,1)
+		GPIO.output(self.me2,1)
