@@ -20,31 +20,31 @@ class Motor(object):
 		self.parar()
 
 	def frente(self):
-		GPIO.OUTPUT(md1,1)
-		GPIO.OUTPUT(md2,0)
-		GPIO.OUTPUT(me1,1)	
-		GPIO.OUTPUT(me2,0)
+		GPIO.OUTPUT(self.md1,1)
+		GPIO.OUTPUT(self.md2,0)
+		GPIO.OUTPUT(self.me1,1)	
+		GPIO.OUTPUT(self.me2,0)
 
 	def re(self):
-		GPIO.OUTPUT(md1,0)
-		GPIO.OUTPUT(md2,1)
-		GPIO.OUTPUT(me1,0)
-		GPIO.OUTPUT(me2,1)
+		GPIO.OUTPUT(self.md1,0)
+		GPIO.OUTPUT(self.md2,1)
+		GPIO.OUTPUT(self.me1,0)
+		GPIO.OUTPUT(self.me2,1)
 
 	def direita(self):
-		GPIO.OUTPUT(md1,0)
-		GPIO.OUTPUT(md2,1)
-		GPIO.OUTPUT(me1,1)
-		GPIO.OUTPUT(me2,0)
+		GPIO.OUTPUT(self.md1,0)
+		GPIO.OUTPUT(self.md2,1)
+		GPIO.OUTPUT(self.me1,1)
+		GPIO.OUTPUT(self.me2,0)
 
 	def esquerda(self):
-		GPIO.OUTPUT(md1,1)
-		GPIO.OUTPUT(md2,0)
-		GPIO.OUTPUT(me1,0)
-		GPIO.OUTPUT(me2,1)		
+		GPIO.OUTPUT(self.md1,1)
+		GPIO.OUTPUT(self.md2,0)
+		GPIO.OUTPUT(self.me1,0)
+		GPIO.OUTPUT(self.me2,1)		
 
 	def parar(self):
-		GPIO.OUTPUT(md1,1)
-		GPIO.OUTPUT(md2,1)
-		GPIO.OUTPUT(me1,1)
-		GPIO.OUTPUT(me2,1)
+		GPIO.OUTPUT(self.md1,1)
+		GPIO.OUTPUT(self.md2,1)
+		GPIO.OUTPUT(self.me1,1)
+		GPIO.OUTPUT(self.me2,1)
