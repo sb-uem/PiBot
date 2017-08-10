@@ -24,8 +24,8 @@ Enable1=1
 Enable2=1
 
 def acelerar(tempo,d):
+   t=float(tempo)
    if d==1:
-      t=float(tempo)
       # MOTOR 1
       GPIO.output(MD1 ,1) # IN1
       GPIO.output(MD2 ,0) # IN2
