@@ -7,9 +7,10 @@ class Encoder(object):
         self.pino = pino
         self.encoder_zera()
         
+        
       
   def encoder_confere(self):
-    self.estadoatual = self.leitura #feita no GPIO de self.pino 
+    self.estadoatual = GPIO.input(self.pino);  
     if ((self.estadoatual) != (self.estadoanterior)):
       self.i = self.i+1
       self.alfa = self.i*18
