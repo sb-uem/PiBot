@@ -3,7 +3,7 @@ from RPIO import PWM
 import curses
 import time
 
-servo = 17
+servo = 13
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BOARD)
 PWM.setup()
@@ -16,10 +16,10 @@ stdscr.keypad(1)
 stdscr.refresh()
 
 def direita():
-    PWM.add_channel_pulse(0, servo, 100, 220 )
+    PWM.add_channel_pulse(0, servo, 100, 70 )
 
 def esquerda():
-    PWM.add_channel_pulse(0, servo, 100, 5 )
+    PWM.add_channel_pulse(0, servo, 100, 180 )
 
 def centro():
     PWM.add_channel_pulse(0, servo, 100, 120 )

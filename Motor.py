@@ -1,13 +1,15 @@
-import RPI.GPIO as GPIO
+import RPi.GPIO as GPIO
 import time
 
-GPIO.setmode(GPIO.BCM)
+#GPIO.setmode(GPIO.BCM)
 
 class Motor(object):
 	
 	def __init__(self,pino1,pino2):
 		self.pino1=pino1 #Pino 1 do motor
 		self.pino2=pino2 #Pino 2 do motor
+		GPIO.setup(self.pino1,GPIO.OUT)
+		GPIO.setup(self.pino2,GPIO.OUT)
 		self.parar()
 
 	def frente(self):
