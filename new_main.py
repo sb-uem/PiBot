@@ -48,27 +48,27 @@ while tecla != ord('q'):
    if tecla == curses.KEY_UP:
       motorDireita.frente()
       motorEsquerda.frente()
+      time.sleep(1)	
       motorDireita.parar()
       motorEsquerda.parar()		
-      time.sleep(1)
    elif tecla == curses.KEY_DOWN:
       motorDireita.re()
       motorEsquerda.re()
+      time.sleep(1)
       motorDireita.parar()
       motorEsquerda.parar()
-      time.sleep(1)
    elif tecla == curses.KEY_LEFT:
       motorDireita.frente()
       motorEsquerda.re()
+      time.sleep(1)	
       motorDireita.parar()
       motorEsquerda.parar()
-      time.sleep(1)
    elif tecla == curses.KEY_RIGHT:
       motorDireita.re()
       motorEsquerda.frente()
+      time.sleep(1)
       motorDireita.parar()
       motorEsquerda.parar()
-      time.sleep(1)
    elif tecla == ord('a'):
 	    camesquerda()
    elif tecla == ord('d'):
