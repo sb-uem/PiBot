@@ -57,9 +57,9 @@ stdscr.keypad(1) #Habilita Uso do Teclado Numerico - Curses
 stdscr.refresh() #Atualiza Tela - Curses
 PWM.setup() #Inicia PWM - RPIO/PWM
 PWM.init_channel(0) #Inicia Canal PWM para Servo Camera - RPIO/PWM
-threading.Thread(target=atualiza_enc1).start()
-threading.Thread(target=atualiza_enc2).start()
-threading.Thread(target=mostrar_encoder).start()
+#threading.Thread(target=atualiza_enc1).start()
+#threading.Thread(target=atualiza_enc2).start()
+#threading.Thread(target=mostrar_encoder).start()
 #---LOOP PRINCIPAL
 tecla = ''
 while tecla != ord('q'):
