@@ -20,6 +20,15 @@ motorEsquerda = Motor.Motor(8,7)
 Enable1=22 #Enable motorDireito
 Enable2=25 #Enable motorEsquerdo
 
+#ler
+def atualiza_enc1():
+	encoderDireita.confere()
+	time.sleep(50)
+
+def atualiza_enc2():
+	encoderEsquerda.confere()
+	time.sleep(50)
+
 #cria o servo da camera
 ServoCam=13 #Controle Servo da Camera
 
@@ -40,6 +49,8 @@ stdscr.keypad(1) #Habilita Uso do Teclado Numerico - Curses
 stdscr.refresh() #Atualiza Tela - Curses
 PWM.setup() #Inicia PWM - RPIO/PWM
 PWM.init_channel(0) #Inicia Canal PWM para Servo Camera - RPIO/PWM
+threading.Thread(target=atualiza_enc1).start()
+threading.Thread(target=atualiza_enc2).start()
 
 #---LOOP PRINCIPAL
 tecla = ''
