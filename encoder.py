@@ -1,4 +1,4 @@
-
+import RPi.GPIO as GPIO
 
 class Encoder(object):
   
@@ -21,9 +21,6 @@ class Encoder(object):
    self.i = 0
    self.alfa = 0
   
-encoderdir=Encoder(19)
-encoderesq=Encoder(26)
-
  
 
 def encoder_confere(estadoatual,i,alfa):
