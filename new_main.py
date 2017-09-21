@@ -23,13 +23,19 @@ Enable2=25 #Enable motorEsquerdo
 #ler
 def atualiza_enc1():
 	while(True):
-		encoderDireita.confere()
+		encoderDireita.encoder_confere()
 		time.sleep(50)
 
 def atualiza_enc2():
 	while(True):
-		encoderEsquerda.confere()
+		encoderEsquerda.encoder_confere()
 		time.sleep(50)
+#escrever
+def mostrar_encoder():
+	while(True):
+		print(encoderDireita.i)
+		print(encoderEsquerda.i)
+		time.sleep(2000)
 
 #cria o servo da camera
 ServoCam=13 #Controle Servo da Camera
