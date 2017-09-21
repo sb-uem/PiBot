@@ -4,7 +4,7 @@ import Motor
 import time
 import RPi.GPIO as GPIO
 import curses
-import thread
+import threading
 from RPIO import PWM
 
 #inicializa
