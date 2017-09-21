@@ -5,7 +5,8 @@ class Encoder(object):
   def __init__(self,pino):
         self.estadoanterior = False
         self.pino = pino
-        self.encoder_zera()
+        GPIO.setup(pino, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+		  self.encoder_zera()
       
   def encoder_confere(self):
     self.estadoatual = GPIO.input(self.pino);  
